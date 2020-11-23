@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <link href="img/favicon.png" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href="css/main.css?v=86801" rel="stylesheet" type="text/css">
-    <script src="js/main.js?v=86801" type="text/javascript"></script>
+    <link href="css/main.css?v=31389" rel="stylesheet" type="text/css">
+    <script src="js/main.js?v=31389" type="text/javascript"></script>
     <!-- Meta tags facebook-->
     <meta property="og:title" content="#">
     <meta property="og:description" content="#">
@@ -40,11 +40,17 @@
                   <div></div>
                 </div>
                 <div class="header__nav__logo"><a href="index.html"><img src="img/icons/logo-gestdoc.svg"></a></div>
+                <div class="header__nav__profile">
+                  <div class="header__avatar"><img src="img/avatar/1.jpg"></div>
+                  <div class="header__name">Pablo Nunez</div>
+                  <div class="header__mail">jpablo.nunez@gmail.com</div>
+                  <div class="header__logout"><a href="#">Cerrar sesión</a></div>
+                </div>
                 <nav>
                   <ul>
                     <li><a href="index.html">Cómo funciona</a></li>
                     <li><a href="aboutus.html">Nosotros</a></li>
-                    <li><a href="recipes.html">Documentos</a></li>
+                    <li><a href="docs.html">Documentos</a></li>
                   </ul>
                 </nav>
                 <div class="header__nav__buttons">
@@ -67,6 +73,16 @@
             <div class="header__right">
               <div class="header__item"><a data-open-register class="btn btn--transparent">Registrarse</a></div>
               <div class="header__item"><a data-open-login class="btn">Ingresar</a></div>
+              <div class="header__item header__item--profile">
+                <div class="header__profile">
+                  <div class="header__profile__body">
+                    <div class="header__name">Pablo Nunez</div>
+                    <div class="header__mail">jpablo.nunez@gmail.com</div>
+                  </div>
+                  <div class="header__avatar"><img src="img/avatar/1.jpg"></div>
+                  <div class="header__logout"><a href="#">Cerrar sesión	</a></div>
+                </div>
+              </div>
               <div class="header__item header__item--ham">
                 <div class="header__ham"><span></span><span></span><span></span></div>
               </div>
@@ -89,31 +105,49 @@
             <div class="section__search__text">Más de 35 mil documentos emitidos</div>
             <div class="section__search__input">
               <div class="section__search__results">
-                <div class="section__search__result">
-                  <div class="section__search__name">Declaración jurada</div>
-                  <div class="section__search__tag">Cesantia</div>
+                <div id="block-list">
+                  <!--.section__search__result
+                  .section__search__name Declaración jurada
+                  .section__search__tag Cesantia
+                  -->
+                  <!--.section__search__result
+                  .section__search__name Declaración jurada
+                  .section__search__tag Ingresos
+                  -->
+                  <!--.section__search__result
+                  .section__search__name Declaración jurada
+                  .section__search__tag No donante
+                  -->
+                  <!--.section__search__result
+                  .section__search__name Declaración jurada
+                  .section__search__tag Donante
+                  -->
+                  <!--.section__search__result
+                  .section__search__name Declaración jurada
+                  .section__search__tag Extravío licencia de conducir
+                  
+                  -->
                 </div>
-                <div class="section__search__result">
-                  <div class="section__search__name">Declaración jurada</div>
-                  <div class="section__search__tag">Ingresos</div>
-                </div>
-                <div class="section__search__result">
-                  <div class="section__search__name">Declaración jurada</div>
-                  <div class="section__search__tag">No donante</div>
-                </div>
-                <div class="section__search__result">
-                  <div class="section__search__name">Declaración jurada</div>
-                  <div class="section__search__tag">Donante</div>
-                </div>
-                <div class="section__search__result">
-                  <div class="section__search__name">Declaración jurada</div>
-                  <div class="section__search__tag">Extravío licencia de conducir</div>
+                <div class="section__search__results__notfound"><span class="section__face">:(</span>
+                  <p class="section__description">¿No encontraste el documento que buscabas?	</p>
+                  <p class="section__description"><a href="#">Cuéntanos</a> qué documento te gustaría que añadiéramos	</p>
                 </div>
               </div>
               <input id="search" type="text" placeholder="Buscar documento">
               <div class="section__search__button"><img src="img/icons/search.svg"></div>
             </div>
             <div class="section__search__back"></div>
+            <div class="section__search__info">
+              <div class="section__search__box">
+                <div class="section__info__tag">		</div>
+                <div class="section__info__name"> </div>
+                <div class="section__info__title">Requerimientos</div>
+                <div id="info-list" class="section__info__items"></div>
+                <div class="section__info__description"></div>
+                <div class="section__info__link"><a href="#" target="_blank" class="btn btn--transparent">Ver más<span class="fa fa-external-link"></span></a></div>
+              </div>
+              <div class="section__search__footer"><a href="#" class="btn btn--transparent clear-info-box">Cancelar		</a><a href="#" class="btn btn--white">Continuar		</a></div>
+            </div>
           </div>
         </div>
       </section>
@@ -123,40 +157,40 @@
             <h3 class="h2 section__title">Acceso rápido</h3>
           </div>
           <div class="section__body">
-            <div class="cols">
-              <div class="col-xs-6 col-md-3">
+            <div class="cols cols--scroll">
+              <div class="col-md-3">
                 <article class="article--fast">
-                  <div class="article__tag">Feugiat consequat
+                  <div class="article__tag">Faucibus est
                   </div>
                   <div class="article__icon"><img src="img/icons/1.svg"></div>
                   <div class="article__body">
-                    <h5 class="article__title"><a href="#">Tristique blandit</a></h5>
+                    <h5 class="article__title"><a href="#">Nam dictumst</a></h5>
                   </div>
                 </article>
               </div>
-              <div class="col-xs-6 col-md-3">
+              <div class="col-md-3">
                 <article class="article--fast">
-                  <div class="article__tag">Etiam iaculis
+                  <div class="article__tag">Odio dictumst
                   </div>
                   <div class="article__icon"><img src="img/icons/2.svg"></div>
                   <div class="article__body">
-                    <h5 class="article__title"><a href="#">Tortor enim</a></h5>
+                    <h5 class="article__title"><a href="#">Praesent netus</a></h5>
                   </div>
                 </article>
               </div>
-              <div class="col-xs-6 col-md-3">
+              <div class="col-md-3">
                 <article class="article--fast">
                   <div class="article__icon"><img src="img/icons/3.svg"></div>
                   <div class="article__body">
-                    <h5 class="article__title"><a href="#">Sollicitudin scelerisque</a></h5>
+                    <h5 class="article__title"><a href="#">Vulputate netus</a></h5>
                   </div>
                 </article>
               </div>
-              <div class="col-xs-6 col-md-3">
+              <div class="col-md-3">
                 <article class="article--fast">
                   <div class="article__icon"><img src="img/icons/4.svg"></div>
                   <div class="article__body">
-                    <h5 class="article__title"><a href="#">Convallis ante</a></h5>
+                    <h5 class="article__title"><a href="#">Purus massa</a></h5>
                   </div>
                 </article>
               </div>
@@ -176,7 +210,7 @@
                 <div class="col-md-6">
                   <div class="section__content">
                     <h2 class="section__title">Busca<span>1</span></h2>
-                    <p class="section__description">Iaculis feugiat donec cras justo mauris dui commodo senectus odio. Neque suspendisse mattis semper fringilla faucibus vestibulum eros duis auctor porttitor proin purus leo donec.
+                    <p class="section__description">Molestie cubilia hac faucibus elementum luctus dui conubia vivamus pellentesque. Commodo velit porttitor augue malesuada suscipit etiam rutrum mi dapibus pellentesque arcu pharetra pulvinar sagittis.
                     </p><a open-toggle-section class="btn">Ver más</a>
                   </div>
                 </div>
@@ -192,7 +226,7 @@
                     <div class="article__title">Fácil</div>
                   </div>
                   <div class="article__body">
-                    <p class="article__description">Iaculis magna sollicitudin metus sed praesent erat justo rutrum accumsan aptent gravida fermentum aliquam commodo.
+                    <p class="article__description">Torquent ante colus facilisis posuere phasellus diam elit per malesuada enim placerat quam faucibus magna.
                     </p>
                   </div>
                 </article>
@@ -204,7 +238,7 @@
                     <div class="article__title">Rápido</div>
                   </div>
                   <div class="article__body">
-                    <p class="article__description">Dui accumsan arcu feugiat suscipit egestas facilisis torquent morbi erat risus fames eget himenaeos malesuada.
+                    <p class="article__description">Fames elit nibh vehicula sociosqu vestibulum quisque pulvinar nunc consectetur per mi adipiscing aliquam vulputate.
                     </p>
                   </div>
                 </article>
@@ -216,14 +250,14 @@
                     <div class="article__title">Completo</div>
                   </div>
                   <div class="article__body">
-                    <p class="article__description">Erat conubia erat tempor rutrum gravida congue mi eleifend porta lacus mollis augue interdum volutpat.
+                    <p class="article__description">Tellus diam quisque eros convallis aenean commodo duis tristique nullam egestas nisi curae non augue.
                     </p>
                   </div>
                 </article>
               </div>
               <div class="col-xs-12">
                 <div class="section__footer">
-                  <div class="section__description">Etiam sagittis dapibus fames curabitur aptent praesent rutrum ornare fringilla. Risus habitant netus ante consequat nunc habitant tristique suspendisse porttitor suscipit quis diam luctus at.
+                  <div class="section__description">Vel accumsan tempor integer commodo sed tristique torquent est massa. Ut interdum aliquam ornare faucibus at class potenti duis malesuada suscipit bibendum interdum sed proin.
                   </div>
                 </div>
               </div>
@@ -242,7 +276,7 @@
                 <div class="col-md-6 col-md-pull-6">
                   <div class="section__content">
                     <h2 class="section__title">Completa<span>2</span></h2>
-                    <p class="section__description">Nibh libero ullamcorper justo sapien sociosqu aliquam convallis phasellus mattis. Quisque lectus malesuada non rutrum dictumst vestibulum felis euismod nulla adipiscing vitae nec facilisis vitae.
+                    <p class="section__description">Bibendum colus nostra felis est nulla bibendum ut pellentesque elit. Facilisis cubilia facilisis consequat orci integer maecenas lobortis ligula viverra consectetur etiam sodales venenatis ut.
                     </p><a open-toggle-section class="btn">Ver más</a>
                   </div>
                 </div>
@@ -258,7 +292,7 @@
                     <div class="article__title">Fácil</div>
                   </div>
                   <div class="article__body">
-                    <p class="article__description">Elementum nisl semper felis tortor quisque tellus purus fermentum aenean porttitor ligula pretium elementum hac.
+                    <p class="article__description">Donec laoreet non lacus velit morbi volutpat habitant elementum donec scelerisque primis nibh nunc eget.
                     </p>
                   </div>
                 </article>
@@ -270,7 +304,7 @@
                     <div class="article__title">Rápido</div>
                   </div>
                   <div class="article__body">
-                    <p class="article__description">Eros integer luctus phasellus sem gravida ad class lacus integer tellus felis himenaeos nunc placerat.
+                    <p class="article__description">Donec etiam vulputate class turpis ante class hendrerit volutpat in fermentum magna integer magna porttitor.
                     </p>
                   </div>
                 </article>
@@ -282,14 +316,14 @@
                     <div class="article__title">Completo</div>
                   </div>
                   <div class="article__body">
-                    <p class="article__description">Massa vehicula inceptos lectus quam luctus aenean mollis suscipit venenatis integer purus porttitor dictum faucibus.
+                    <p class="article__description">Ad praesent habitant a inceptos purus quisque risus malesuada nam et vestibulum metus est vehicula.
                     </p>
                   </div>
                 </article>
               </div>
               <div class="col-xs-12">
                 <div class="section__footer">
-                  <div class="section__description">Himenaeos justo elit sagittis aenean eget pharetra diam vulputate volutpat. Convallis ornare tristique odio quisque mattis urna mi urna libero curabitur facilisis blandit et habitant.
+                  <div class="section__description">Convallis dictumst feugiat diam maecenas tellus dui condimentum etiam inceptos. Nisi platea euismod diam dictumst praesent pharetra volutpat mollis lectus donec nibh dictum curae ornare.
                   </div>
                 </div>
               </div>
@@ -303,12 +337,12 @@
             <div class="cols">
               <div class="section__flex">
                 <div class="col-md-6">
-                  <div class="section__img"><img src="img/gif/1.gif"></div>
+                  <div class="section__img"><img src="img/gif/3.gif"></div>
                 </div>
                 <div class="col-md-6">
                   <div class="section__content">
                     <h2 class="section__title">Firma<span>3</span></h2>
-                    <p class="section__description">Vivamus donec cubilia semper hendrerit class nisl euismod vivamus felis. Sociosqu dui bibendum hendrerit cubilia pulvinar pulvinar pellentesque velit proin habitasse eros condimentum colus commodo.
+                    <p class="section__description">Orci hac etiam aenean donec sem ultrices tincidunt fermentum molestie. Molestie nisl pharetra interdum luctus volutpat sagittis dapibus euismod massa aptent himenaeos tempor quis est.
                     </p><a open-toggle-section class="btn">Ver más</a>
                   </div>
                 </div>
@@ -324,7 +358,7 @@
                     <div class="article__title">Fácil</div>
                   </div>
                   <div class="article__body">
-                    <p class="article__description">Ac varius eget enim ut quisque sem colus fusce nibh taciti quis ligula tempus morbi.
+                    <p class="article__description">Dui nullam magna nunc habitasse semper erat faucibus risus cras ultrices taciti purus vehicula accumsan.
                     </p>
                   </div>
                 </article>
@@ -336,7 +370,7 @@
                     <div class="article__title">Rápido</div>
                   </div>
                   <div class="article__body">
-                    <p class="article__description">Non sapien varius laoreet porttitor platea mauris metus facilisis erat lacus condimentum auctor vestibulum dictumst.
+                    <p class="article__description">Elit adipiscing feugiat sagittis iaculis fusce imperdiet varius vivamus habitant etiam ornare venenatis aenean fermentum.
                     </p>
                   </div>
                 </article>
@@ -348,14 +382,14 @@
                     <div class="article__title">Completo</div>
                   </div>
                   <div class="article__body">
-                    <p class="article__description">Rhoncus viverra ultricies vitae rutrum mauris cursus non nec himenaeos aenean varius iaculis rutrum aliquam.
+                    <p class="article__description">Et accumsan proin nullam maecenas nec massa tortor est vel neque dapibus quam eu venenatis.
                     </p>
                   </div>
                 </article>
               </div>
               <div class="col-xs-12">
                 <div class="section__footer">
-                  <div class="section__description">Sagittis porttitor condimentum dui at aptent torquent enim pellentesque curabitur. Quisque conubia habitant ac interdum pulvinar curae arcu fames enim sem diam imperdiet vivamus quam.
+                  <div class="section__description">Auctor lacus dapibus sociosqu id nec purus ligula ut colus. Felis curae himenaeos tempor accumsan id velit platea habitant primis praesent pellentesque suscipit duis placerat.
                   </div>
                 </div>
               </div>
@@ -372,7 +406,7 @@
               </div>
               <div class="article__body">
                 <div class="article__stars"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></div>
-                <p class="article__description">Dapibus arcu est dictumst malesuada convallis eu ante quisque nunc velit per eros non vulputate.
+                <p class="article__description">Ornare eu posuere etiam tristique augue suscipit habitasse at sem nunc hac sapien arcu curae.
                 </p><span class="article__name">Macarena, Contadora</span>
               </div>
             </article>
@@ -382,7 +416,7 @@
               </div>
               <div class="article__body">
                 <div class="article__stars"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></div>
-                <p class="article__description">Enim ut tellus sagittis curae urna ut proin litora elementum ante sodales aliquet nisi sem.
+                <p class="article__description">Curae taciti iaculis vivamus tempor praesent laoreet pretium donec class cras pretium colus enim id.
                 </p><span class="article__name">Cristobal, Contador</span>
               </div>
             </article>
@@ -392,7 +426,7 @@
               </div>
               <div class="article__body">
                 <div class="article__stars"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></div>
-                <p class="article__description">Risus gravida tempus tristique colus purus suscipit duis laoreet eu colus nullam eleifend litora venenatis.
+                <p class="article__description">Ultrices semper suspendisse fames bibendum fringilla justo egestas vel conubia velit egestas faucibus nunc luctus.
                 </p><span class="article__name">Mariana, Abogado</span>
               </div>
             </article>
@@ -402,7 +436,7 @@
               </div>
               <div class="article__body">
                 <div class="article__stars"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></div>
-                <p class="article__description">Vestibulum consequat purus fringilla nulla metus posuere sociosqu cras commodo donec vulputate platea taciti potenti.
+                <p class="article__description">Cras senectus himenaeos nunc viverra ut magna etiam orci elementum colus laoreet sollicitudin ornare aliquet.
                 </p><span class="article__name">Macarena, Contadora</span>
               </div>
             </article>
@@ -412,7 +446,7 @@
               </div>
               <div class="article__body">
                 <div class="article__stars"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></div>
-                <p class="article__description">Neque quam maecenas sodales nostra etiam proin etiam class diam metus gravida elit leo praesent.
+                <p class="article__description">Quis mauris nibh curabitur aliquet malesuada consectetur diam tempor etiam curabitur aliquam pharetra eget hendrerit.
                 </p><span class="article__name">Cristobal, Contador</span>
               </div>
             </article>
@@ -422,7 +456,7 @@
               </div>
               <div class="article__body">
                 <div class="article__stars"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></div>
-                <p class="article__description">Curabitur integer senectus purus egestas etiam inceptos cras quisque cursus tempus quisque gravida ut leo.
+                <p class="article__description">Gravida ultrices velit suspendisse diam tempor donec tempor mauris etiam erat torquent primis hac ligula.
                 </p><span class="article__name">Mariana, Abogado</span>
               </div>
             </article>
@@ -432,7 +466,7 @@
               </div>
               <div class="article__body">
                 <div class="article__stars"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></div>
-                <p class="article__description">Ac sem nec potenti nam non aenean per risus massa interdum faucibus imperdiet pellentesque fames.
+                <p class="article__description">Tincidunt senectus gravida etiam arcu cras nisi cubilia nibh leo sem velit hac dictum elit.
                 </p><span class="article__name">Macarena, Contadora</span>
               </div>
             </article>
@@ -442,7 +476,7 @@
               </div>
               <div class="article__body">
                 <div class="article__stars"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></div>
-                <p class="article__description">Sagittis porta rhoncus augue arcu varius nibh per neque himenaeos elementum malesuada purus enim donec.
+                <p class="article__description">Pharetra purus feugiat rutrum quisque est eu justo blandit maecenas per fames sollicitudin laoreet cubilia.
                 </p><span class="article__name">Cristobal, Contador</span>
               </div>
             </article>
@@ -452,7 +486,7 @@
               </div>
               <div class="article__body">
                 <div class="article__stars"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></div>
-                <p class="article__description">Odio magna lectus leo ut justo nostra blandit laoreet vehicula vestibulum cursus lobortis velit viverra.
+                <p class="article__description">Placerat duis fusce fringilla aliquam ullamcorper nullam aliquet vehicula dictum quisque scelerisque placerat tristique ligula.
                 </p><span class="article__name">Mariana, Abogado</span>
               </div>
             </article>
@@ -462,7 +496,7 @@
               </div>
               <div class="article__body">
                 <div class="article__stars"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></div>
-                <p class="article__description">Rutrum nibh habitasse tempor interdum vulputate imperdiet urna tristique phasellus quisque at elementum fusce euismod.
+                <p class="article__description">Posuere scelerisque aenean cras torquent eu leo placerat bibendum lectus ullamcorper ut risus vivamus venenatis.
                 </p><span class="article__name">Macarena, Contadora</span>
               </div>
             </article>
@@ -472,7 +506,7 @@
               </div>
               <div class="article__body">
                 <div class="article__stars"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></div>
-                <p class="article__description">Habitant scelerisque quisque erat interdum nunc colus arcu per lacus sapien enim fringilla sed sollicitudin.
+                <p class="article__description">Luctus lectus odio platea pellentesque est in pharetra placerat feugiat sed platea vel consectetur sociosqu.
                 </p><span class="article__name">Cristobal, Contador</span>
               </div>
             </article>
@@ -482,7 +516,7 @@
               </div>
               <div class="article__body">
                 <div class="article__stars"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></div>
-                <p class="article__description">Tortor non turpis non blandit elementum aliquet tellus iaculis vitae pellentesque pellentesque nulla pulvinar inceptos.
+                <p class="article__description">Lobortis consequat tincidunt neque congue enim scelerisque consequat duis fames porttitor sed pretium duis suspendisse.
                 </p><span class="article__name">Mariana, Abogado</span>
               </div>
             </article>
@@ -522,7 +556,7 @@
               </form>
             </div>
             <div class="login__footer"><a href="#" class="btn btn--link">Olvide mi contraseña</a><a href="#" class="btn btn--link">Registrarme</a></div>
-            <p class="login__description">Aenean facilisis curabitur class aptent arcu hendrerit euismod ornare orci. Inceptos feugiat tempus porta aliquam nostra etiam ultricies curabitur purus orci conubia morbi pharetra gravida.
+            <p class="login__description">Pellentesque curabitur primis porta inceptos faucibus sagittis neque lobortis sagittis. Ac felis nostra consequat convallis etiam duis vel eget posuere iaculis felis curabitur ultricies pulvinar.
             </p>
           </div>
         </div>
@@ -550,7 +584,7 @@
               </form>
             </div>
             <div class="login__footer"><a href="#" class="btn btn--link">Olvide mi contraseña</a><a href="#" class="btn btn--link">Ingresar</a></div>
-            <p class="login__description">Curabitur tristique potenti consequat cubilia sem aliquet condimentum eros cras. Vestibulum metus litora mauris class tempor inceptos nullam nulla varius sociosqu non varius vel venenatis.
+            <p class="login__description">Non ac habitasse mattis lobortis hendrerit sed fringilla mattis cubilia. Suscipit nisl rutrum curabitur vehicula class orci leo imperdiet mauris primis conubia condimentum vulputate viverra.
             </p>
           </div>
         </div>
@@ -574,7 +608,7 @@
             <div class="footer__links">
               <ul>
                 <li class="footer__links__title">Ayuda</li>
-                <li><a href="#">Preguntas frecuentes</a></li>
+                <li><a href="faq.html">Preguntas frecuentes</a></li>
                 <li><a href="#">Contacto</a></li>
                 <li><a href="#">Políticas</a></li>
               </ul>

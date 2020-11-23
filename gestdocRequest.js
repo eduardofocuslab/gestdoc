@@ -3,7 +3,7 @@ var gestdocRequest = [
         "_requirements": [
             "Comparecencia personal del padre con cédula de identidad vigente.",
             "Comparecencia personal de la madre con cédula de identidad vigente.",
-            "Certificado de nacimiento para todo trámite {{https://www.notarioexpress.cl/transferenciadevehiculo}}"
+            "Certificado de nacimiento para todo trámite"
         ],
         "_id": "5f6baf0c40e20769d00c388b",
         "_nameSchema": "Régimen Tributario",
